@@ -1,0 +1,43 @@
+import { Given, When, Then } from 'cucumber';
+import { browser } from 'webdriverio';
+
+Given('I am on the homepage', () => {
+  browser.url('https://magento.softwaretestingboard.com/');
+});
+
+When('I access the Shop', () => {
+  const shopLink = $('[href="/shop/"]');
+  shopLink.click();
+});
+
+When('I filter for a Certain Category', () => {
+  // Implement code to filter for a certain category
+  const categoryFilter = $('#category');
+  categoryFilter.selectByVisibleText('JavaScript');
+});
+
+When('I open the Product Page', () => {
+  // Implement code to open a product page
+  const productLink = $('Your selector here'); // Replace with the selector for the product link
+  productLink.click();
+});
+
+When('I add multiple quantities of the product to the cart', () => {
+  // Implement code to add multiple quantities to the cart
+  const quantityInput = $('Your selector here'); // Replace with the selector for the quantity input field
+  quantityInput.setValue('2'); // Set the desired quantity
+  const addToCartButton = $('Your selector here'); // Replace with the selector for the "Add to Cart" button
+  addToCartButton.click();
+});
+
+When('I perform a Checkout', () => {
+  // Implement code to perform the checkout
+  const checkoutButton = $('Your selector here'); // Replace with the selector for the checkout button
+  checkoutButton.click();
+});
+
+Then('I should see the checkout success message', () => {
+  // Implement code to verify the checkout success message
+  const successMessage = $('Your selector here'); // Replace with the selector for the success message
+  expect(successMessage).toBeDisplayed();
+});

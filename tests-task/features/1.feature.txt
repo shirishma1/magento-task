@@ -1,0 +1,10 @@
+Feature: Checkout a product
+
+  Scenario: Purchase a product
+    Given I am on the homepage
+    When I access the Shop
+    And I filter for a Certain Category
+    And I open the Product Page
+    And I add multiple quantities of the product to the cart
+    And I perform a Checkout
+    Then I should see the checkout success message

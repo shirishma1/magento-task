@@ -1,0 +1,19 @@
+{
+  "name": "tests-task",
+  "version": "1.0.0",
+  "description": "npm init -y\r npm install --save-dev @wdio/cli @wdio/cucumber-framework cucumber typescript\r npx wdio config\r npm test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^8.17.0",
+    "@wdio/cucumber-framework": "^8.17.0",
+    "cucumber": "^6.0.7",
+    "typescript": "^5.2.2"
+  }
+}
